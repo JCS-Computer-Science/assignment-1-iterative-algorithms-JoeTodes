@@ -23,28 +23,17 @@ console.log(`Bubble Sort: \n${bubbleResult}`);
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
 const searchTestArraySize = 10;
-const searchTestArray = Array.from(
-	{ length: searchTestArraySize },
-	(v, i) => i * 2 + 1
-);
-const searchTestAnswer = Math.floor(
-	Math.random() * searchTestArraySize
-);
+const searchTestArray = Array.from({ length: searchTestArraySize }, (v, i) => i * 2 + 1);
+const searchTestAnswer = Math.floor(Math.random() * searchTestArraySize);
 const searchTestTerm = searchTestArray[searchTestAnswer];
 console.log(`Search Test Array: \n${searchTestArray}`);
 console.log(`Searching for ${searchTestTerm}`);
 console.log(`Result should be ${searchTestAnswer}\n`);
 
 console.log("Linear Search:");
-let linearSearchResults = linearSearch(
-	[...searchTestArray],
-	searchTestTerm
-);
+let linearSearchResults = linearSearch([...searchTestArray], searchTestTerm);
 console.log(`Result: ${linearSearchResults}`);
 
 console.log("Binary Search:");
-let binarySearchResults = binarySearch(
-	[...searchTestArray],
-	searchTestTerm
-);
+let binarySearchResults = binarySearch([...searchTestArray], searchTestTerm);
 console.log(`Result: ${binarySearchResults}`);
